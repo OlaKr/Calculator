@@ -7,6 +7,6 @@
 - LCD 1602
 ![LCD](https://github.com/OlaKr/Calculator/blob/main/images/LCD1602.jpg)
 - Tact Switch 4x4
-![16buttons](https://github.com/OlaKr/Calculator/blob/main/images/FRDM-KL05Z.jpg)
+![16buttons](https://github.com/OlaKr/Calculator/blob/main/images/buttons.jpg)
 
 
