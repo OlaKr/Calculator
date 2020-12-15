@@ -1,10 +1,9 @@
 <html lang="en">
 <head>
 	<style>
-	body{
-	background:pink;
-}
-</style>
+  		h1 {background:red;}
+ 	 	p {color:blue;}
+	</style>
   <meta charset="utf-8">
   <meta name="description" content="calc">
   <meta name="Olesnik" content="konspekt">
