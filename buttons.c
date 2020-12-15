@@ -2,7 +2,7 @@
 #include "buttons.h"
 		
 char tab[16] = {'1','2','3','+','4','5','6','-','7','8','9','*','C','0','=','/'};
-		
+		//s
 void buttons_init(void)
 {
 	SIM->SCGC5 |= SIM_SCGC5_PORTA_MASK;
