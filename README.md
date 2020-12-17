@@ -3,7 +3,7 @@
 ## Project topic:
 Calculator with displayed time
 
-## Project purpose:
+## Purpose:
 Create a calculator with basic math functions like addition, subtraction, multiplication, division, square root and exponentiation. Make a clock showing the real time.
 
 ## Used elements:
