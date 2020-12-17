@@ -1,7 +1,10 @@
 # Calculator
 
-Temat: Kalkulator oraz zegar
-Cel projektu: Wykonanie działającego kalkulatora z podstawowymi funkcjami matematycznymi jak dodawanie, odejmowanie, mnożenie oraz dzielenie. Wykonanie zegara pokazującego aktualną godzinę.
+## Project topic:
+Calculator with displayed time
+
+## Project purpose:
+Create a calculator with basic math functions like addition, subtraction, multiplication, division, square root and exponentiation. Make a clock showing the real time.
 
 ## Used elements:
 - FRDM-KL05Z set with 32 bit MKL05Z32VFM4 microcontroller
@@ -13,5 +16,4 @@ Cel projektu: Wykonanie działającego kalkulatora z podstawowymi funkcjami mate
 - Tact Switch 4x4
 ![16buttons](https://github.com/OlaKr/Calculator/blob/main/images/buttons.jpg)
 
-olaola
 
