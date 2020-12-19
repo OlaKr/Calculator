@@ -9,6 +9,7 @@
 char temp[20]={"\0"};
 int counter = 0;
 char sep[2];
+int s = 0;
 
 void calculator(char arg){
 	LCD1602_SetCursor(0, 0);
@@ -22,8 +23,8 @@ void calculator(char arg){
 				LCD1602_Print(temp);
 			LCD1602_SetCursor(0, 1);
 				LCD1602_Print("=");
-		ParseString(temp, sep);
-		
+		//ParseString(temp, sep);
+		getResult(temp, temp, s);
 		
 			counter = 0;
 			memset(temp,0,sizeof(temp));
@@ -38,6 +39,7 @@ void calculator(char arg){
 			LCD1602_SetCursor(0, 0);
 			LCD1602_Print(temp);
 			counter++;
+			s++;
 	}
 	else{
 			temp[counter] = arg;
@@ -67,4 +69,72 @@ void ParseString(char* str, char* separator)
 	else if(separator[0] =='/') result = a/b;
 	inttostring(sm,result);
 	LCD1602_Print(sm);
+}
+
+void getResult(char* str, char* str2, int size) {
+
+    char c2[20];
+    strcpy(c2, str2);
+
+    int liczby[20];
+    char dzialania[20] = { "\0" };
+
+    char* pch;
+    pch = strtok(str, "+-*/");
+
+    int counter1 = 0;
+    while (pch != NULL)
+    {
+        int a = atoi(pch);
+        liczby[counter1] = a;
+        counter1 = counter1 + 1;
+        //printf("%s\n", pch);
+        pch = strtok(NULL, "+-*/");
+    }
+
+   
+    char* pch2;
+    pch2 = strtok(c2, "0123456789");
+    int counter2 = 0;
+    while (pch2 != NULL)
+    {
+        dzialania[counter2] = *(pch2);
+        counter2++;
+        //printf("%s\n", pch2);
+        pch2 = strtok(NULL, "0123456789");
+    }
+
+			char* p;
+			int i;
+			p = dzialania;
+
+			int result = liczby[0];
+			for (i = 0; i < size; i++) {
+					char tmp = *p;
+					switch (tmp) {
+
+					case '+':
+							result = result + liczby[i + 1];
+							break;
+					case '-':
+							result = result - liczby[i + 1];
+							break;
+					case '/':
+							result = result / liczby[i + 1];
+							break;
+					case '*':
+							result = result * liczby[i + 1];
+							break;
+					}
+					p++;
+			}
+			char sm[20]={"\0"};
+			inttostring(sm,result);
+			LCD1602_Print(sm);
+		
+		
+   
+		
+   // printf("%d", result); 
+
 }
