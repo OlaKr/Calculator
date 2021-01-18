@@ -4,6 +4,7 @@
 #include "lcd1602.h"
 #include "pit.h"
 #include "i2c.h"
+#include "rtc.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -12,6 +13,12 @@ typedef enum {false, true} bool;
 
 
 bool irqTimer=0;
+uint32_t sec=0;
+
+void RTC_Seconds_IRQHandler()
+{
+	sec++;
+}
 
 
 void PIT_IRQHandler(){
@@ -28,19 +35,24 @@ int main(void) {
 
 	LCD1602_Init(); /* initialize LCD */
 	LCD1602_Backlight(TRUE);
+	rtc_init();
 	buttons_init();
 	PIT_Init();
+	char temp[20]={"\0"};
 	while (1) 
 		{
 			if(irqTimer)
 			{
 				for (int i = 1; i < 5; i++)
 				{
-						choose_row(i);
-					if(print_button(i) != 0)
-						calculator(print_button(i));
+			//			choose_row(i);
+			//		if(print_button(i) != 0)
+			//			calculator(print_button(i));
 					
 				}
+				LCD1602_SetCursor(0,0);
+				sprintf(temp, "%i", sec);
+	LCD1602_Print(temp);
 				irqTimer=0;
 			}
 			
