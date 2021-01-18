@@ -132,7 +132,7 @@ void getResult(char* str, char* str2, int size) {
 			inttostring(sm,result);
 			LCD1602_Print(sm);
 		
-		
+
    
 		
    // printf("%d", result); 

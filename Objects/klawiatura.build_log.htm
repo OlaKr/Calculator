@@ -21,70 +21,13 @@ Target DLL:      Segger\JL2CM3.dll V2.99.38.0
 Dialog DLL:      TARMCM1.DLL V1.14.2.0
  
 <h2>Project:</h2>
-C:\Users\Lidia\Documents\TMP2\projektTMP\klawiatura.uvprojx
+C:\Users\Lidia\Documents\GitHub\Calculator\klawiatura.uvprojx
 Project File Date:  12/04/2020
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.14', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'FRDM-KL05ZJ'
-calc.c(2): warning: In file included from...
-./calc.h(7): warning: no newline at end of file [-Wnewline-eof]
-#endif
-      ^
-calc.c(9): warning: no previous extern declaration for non-static variable 'temp' [-Wmissing-variable-declarations]
-char temp[20]={"\0"};
-     ^
-calc.c(9): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-char temp[20]={"\0"};
-^
-calc.c(10): warning: no previous extern declaration for non-static variable 'counter' [-Wmissing-variable-declarations]
-int counter = 0;
-    ^
-calc.c(10): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-int counter = 0;
-^
-calc.c(12): warning: no previous extern declaration for non-static variable 's' [-Wmissing-variable-declarations]
-int s = 0;
-    ^
-calc.c(12): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-int s = 0;
-^
-calc.c(63): warning: incompatible integer to pointer conversion passing 'int' to parameter of type 'const char *' [-Wint-conversion]
-        ptr=strtok(NULL,'=');
-                        ^~~
-C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(280): note: passing argument to parameter here
-extern _ARMABI char *strtok(char * __restrict /*s1*/, const char * __restrict /*s2*/) __attribute__((__nonnull__(2)));
-                                                                                    ^
-calc.c(59): warning: unused variable 'i' [-Wunused-variable]
-        uint8_t i=0;
-                ^
-calc.c(69): warning: variable 'result' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
-        else if(separator[0] =='/') result = a/b;
-                ^~~~~~~~~~~~~~~~~~
-calc.c(70): note: uninitialized use occurs here
-        inttostring(sm,result);
-                       ^~~~~~
-calc.c(69): note: remove the 'if' if its condition is always true
-        else if(separator[0] =='/') result = a/b;
-             ^~~~~~~~~~~~~~~~~~~~~~~
-calc.c(65): note: initialize the variable 'result' to silence this warning
-        int result;
-                  ^
-                   = 0
-calc.c(140): warning: no newline at end of file [-Wnewline-eof]
-}
- ^
-calc.c(11): warning: no previous extern declaration for non-static variable 'sep' [-Wmissing-variable-declarations]
-char sep[2];
-     ^
-calc.c(11): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-char sep[2];
-^
-9 warnings generated.
-compiling calc.c...
-linking...
-Program Size: Code=3548 RO-data=532 RW-data=28 ZI-data=392  
-".\Objects\klawiatura.axf" - 0 Error(s), 9 Warning(s).
+".\Objects\klawiatura.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -110,9 +53,9 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.4.0
 
    * Component: Keil::Device:Startup:1.0.0
-      Source file:   Device\Source\ARM\startup_MKL05Z4.s
       Source file:   Device\Source\system_MKL05Z4.c
-Build Time Elapsed:  00:00:01
+      Source file:   Device\Source\ARM\startup_MKL05Z4.s
+Build Time Elapsed:  00:00:00
 </pre>
 </body>
 </html>
