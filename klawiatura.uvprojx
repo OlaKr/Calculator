@@ -413,6 +413,11 @@
               <FileType>1</FileType>
               <FilePath>.\calc.c</FilePath>
             </File>
+            <File>
+              <FileName>rtc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rtc.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -447,6 +452,11 @@
               <FileName>calc.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\calc.h</FilePath>
+            </File>
+            <File>
+              <FileName>rtc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\rtc.h</FilePath>
             </File>
           </Files>
         </Group>
