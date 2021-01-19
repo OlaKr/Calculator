@@ -45,7 +45,7 @@ int main(void) {
 	//buzzer
 	SIM->SCGC5 |= SIM_SCGC5_PORTB_MASK;
 	PORTB->PCR[13] |= PORT_PCR_MUX(1); /* MUX cónfig. Set Pin 8 óf PORT B as GPIO */
-	
+	PTB->PDDR |= (1<<13);
 	
 	//dioda
 	PORTB->PCR[2] |= PORT_PCR_MUX(1); /* MUX cónfig. Set Pin 8 óf PORT B as GPIO */
@@ -68,6 +68,12 @@ int main(void) {
 		{
 			if(irqTimer)
 			{
+				if (FLAG == 1){
+					buzzer();
+					FLAG = 0;
+				} 
+	
+				
 				for (int i = 1; i < 5; i++)
 				{
 						choose_row(i);

@@ -3,7 +3,7 @@
 
 
 void buzzer(void){
-	PTB->PDDR |= (1<<13);
+	
 	
 	//PTB->PDOR&=~(1<<13); //off
 	PTB->PDOR|=(1<<13); //on

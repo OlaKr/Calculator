@@ -11,6 +11,8 @@ char temp[20]={"\0"};
 int counter = 0;
 char sep[2];
 int s = 0;
+int FLAG = 0;
+char last_arg;
 
 void calculator(char arg){
 	LCD1602_SetCursor(0, 0);
@@ -35,7 +37,8 @@ void calculator(char arg){
 			memset(temp,0,sizeof(temp));
 	}
 	else if(arg == '+' || arg == '-' || arg == '*' || arg == '/'){
-			sep[0] = arg;
+			//sep[0] = arg;
+			last_arg = arg;
 			temp[counter] = arg;
 			LCD1602_SetCursor(0, 0);
 			LCD1602_Print(temp);
@@ -43,10 +46,18 @@ void calculator(char arg){
 			s++;
 	}
 	else{
-			temp[counter] = arg;
-			LCD1602_SetCursor(0, 0);
-			LCD1602_Print(temp);
-			counter++;
+			if(last_arg == '/' && arg == '0'){
+				FLAG = 1;
+				counter = 0;
+				memset(temp,0,sizeof(temp));
+			}
+			else{
+				temp[counter] = arg;
+				LCD1602_SetCursor(0, 0);
+				LCD1602_Print(temp);
+				counter++;
+			}
+			
 	}
 		
 
