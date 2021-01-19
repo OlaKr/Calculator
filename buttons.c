@@ -81,35 +81,30 @@ char print_button(int row)
 {
 	int button;
 	char result[5];
+	
 	if ((PTA->PDIR & (1 << COLUMNE1)) == 0)
 	{
-		
-		/*LCD1602_SetCursor(0, 0);
-		char temp[2]={"\0"};
-		temp[0]= tab[button];
-		LCD1602_Print(temp);
-		LCD1602_Print("sss");*/
 		
 		button = (row - 1) * 4;
 		return tab[button];
 		
-		//inttostring(result, button);
-		
-		
 		while ((PTA->PDIR & (1 << COLUMNE1)) == 0);
 	}
+	
 	else if ((PTA->PDIR & (1 << COLUMNE2)) == 0)
 	{
 		button = (row - 1) * 4 + 1;
 		return tab[button];
 		while ((PTA->PDIR & (1 << COLUMNE2)) == 0);
 	}
+	
 	else if ((PTA->PDIR & (1 << COLUMNE3)) == 0)
 	{
 		button = (row - 1) * 4 + 2;
 		return tab[button];
 		while ((PTA->PDIR & (1 << COLUMNE3)) == 0);
 	}
+	
 	else if ((PTA->PDIR & (1 << COLUMNE4)) == 0)
 	{
 		button = (row - 1) * 4 + 3;
@@ -117,16 +112,18 @@ char print_button(int row)
 		while ((PTA->PDIR & (1 << COLUMNE4)) == 0);
 	}
 	
-	else if( ( PTB->PDIR & (1<<BUTTON_POWER) ) ==0 ){ /* Test if buttón pressed */
-							return '^';
-						while( ( PTB->PDIR & (1<<BUTTON_POWER) ) == 0 ) /* Wait fór release */
-							delay_ms(100); /* Debóuncing */
+	else if( ( PTB->PDIR & (1<<BUTTON_POWER) ) ==0 )
+		{ /* Test if buttón pressed */
+			return '^';
+			while( ( PTB->PDIR & (1<<BUTTON_POWER) ) == 0 ) /* Wait fór release */
+			delay_ms(100); /* Debóuncing */
 		}
 	
-	else if( ( PTB->PDIR & (1<<BUTTON_SQRT) ) ==0 ){ /* Test if buttón pressed */
-							return 's';
-						while( ( PTB->PDIR & (1<<BUTTON_SQRT) ) == 0 ) /* Wait fór release */
-							delay_ms(100); /* Debóuncing */
+	else if( ( PTB->PDIR & (1<<BUTTON_SQRT) ) ==0 )
+		{ /* Test if buttón pressed */
+			return 's';
+			while( ( PTB->PDIR & (1<<BUTTON_SQRT) ) == 0 ) /* Wait fór release */
+			delay_ms(100); /* Debóuncing */
 		}	
 	
 	
@@ -142,25 +139,28 @@ void mode_change(void){
 			MODE_FLAG =0;
 			//PTB->PDOR&=~(1<<2); //off
 			LCD1602_SetCursor(0,0);
-			LCD1602_Print("");
+			LCD1602_Print("Kalkulator");
 			LCD1602_SetCursor(0,1);
-			LCD1602_Print("");
+			LCD1602_Print("                 ");
 		}
+		
 		else if(MODE_FLAG == 0){
 			PTB->PDOR&=~(1<<2); //off
 			MODE_FLAG = 1;
 			//PTB->PDOR|=(1<<2); //on
 			LCD1602_SetCursor(0,0);
-			LCD1602_Print("");
+			LCD1602_Print("Zegar      ");
 			LCD1602_SetCursor(0,1);
-			LCD1602_Print("");
+			LCD1602_Print("                   ");
 		}
+		
 		while( ( PTB->PDIR & (1<<BUTTON_MODE) ) == 0 ) /* Wait fór release */
-							delay_ms(100); /* Debóuncing */
+			delay_ms(100); /* Debóuncing */
 	}
 }
 
 void inttostring(char* str, int number) {
+	
 	int mod, len, num;
 
 	len = 0;

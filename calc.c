@@ -20,36 +20,56 @@ int result = 0;
 
 void calculator(char arg){
 	LCD1602_SetCursor(0, 0);
-			LCD1602_Print("                ");
+			LCD1602_Print("Kalkulator");
 	LCD1602_SetCursor(0, 1);
 			LCD1602_Print("                ");
 	
 	if(arg == '='){
 			temp[counter] = arg;
-			LCD1602_SetCursor(0, 0);
+			LCD1602_SetCursor(0,1);
 			LCD1602_Print(temp);
-			LCD1602_SetCursor(10, 0);
-			
+			LCD1602_SetCursor(10,1);
 			
 			int a = atoi(number);
 			if(last_arg == '+'){
 				result = result + a;
 			}
+			
 			else if(last_arg == '-'){
 				result = result - a;
 			}
+			
 			else if(last_arg == '/'){
-				result = result / a;
+				//dzielenie przez 0
+				if(a == 0){
+					LCD1602_SetCursor(0,1);
+					LCD1602_Print("niedozw. ");
+					FLAG = 1;
+					counter = 0;
+					memset(temp,0,sizeof(temp));
+					memset(number,0,sizeof(number));
+					last_arg = '+';
+					reset=0;
+					result = 0;
+				}
+				
+				else{
+				 result = result / a;
+				}
+				
 			}
 			else if(last_arg == '*'){
 				result = result * a;
 			}
+			
 			else if(last_arg == '^'){
 				result = pow(result,a);
 			}
+			
 			else if(last_arg == 's'){
 				result = sqrt(a);
 			}
+			
 			char sm[20]={"\0"};
 			inttostring(sm,result);
 			LCD1602_SetCursor(12, 1);
@@ -62,54 +82,72 @@ void calculator(char arg){
 			reset=0;
 			result = 0;
 	}
+	
 	else if (arg == 'C'){
 			counter = 0;
 			memset(temp,0,sizeof(temp));
+			memset(number,0,sizeof(number));
+			last_arg = '+';
+			reset=0;
+			result = 0;
 		
 	}
+	
 	else if(arg == '+' || arg == '-' || arg == '*' || arg == '/' || arg == '^' || arg == 's'){
-			//sep[0] = arg;
+
 			int a = atoi(number);
 			if(last_arg == '+'){
 				result = result + a;
 			}
+			
 			else if(last_arg == '-'){
 				result = result - a;
 			}
+			
 			else if(last_arg == '/'){
-				result = result / a;
+				//dzielenie przez 0
+				if(a == 0){
+					FLAG = 1;
+					LCD1602_SetCursor(0,1);
+					LCD1602_Print("niedozw. ");
+					counter = 0;
+					memset(temp,0,sizeof(temp));
+					memset(number,0,sizeof(number));
+					last_arg = '+';
+					reset=0;
+					result = 0;
+				}
+				
+				else{
+				 result = result / a;
+				}
 			}
+			
 			else if(last_arg == '*'){
 				result = result * a;
 			}
-		
-			//char sm[20]={"\0"};
-			//inttostring(sm,a);
-			//LCD1602_SetCursor(12, 1);
-			//LCD1602_Print("???");
-			
-			
+				
 			memset(number,0,sizeof(number));
 			
 			last_arg = arg;
 			temp[counter] = arg;
-			LCD1602_SetCursor(0, 0);
+			LCD1602_SetCursor(0, 1);
 			LCD1602_Print(temp);
 			counter++;
 			reset=0;
 			s++;
 	}
+	
 	else{
 			
 				temp[counter] = arg;
 				number[reset] = arg;
-				LCD1602_SetCursor(0, 0);
+				LCD1602_SetCursor(0, 1);
 				LCD1602_Print(temp);
 				counter++;
 				reset++;
 			
 	}	
-	
 }
 
 
