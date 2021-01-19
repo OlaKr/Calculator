@@ -1,6 +1,6 @@
 Dependencies for Project 'klawiatura', Target 'FRDM-KL05ZJ': (DO NOT MODIFY !)
 CompilerVersion: 6140000::V6.14::ARMCLANG
-F (.\buttons.c)(0x6006F11C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_FRDM-KL05ZJ-IC:/Users/Lidia/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Lidia/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DMKL05Z32xxx4 -D_RTE_-o ./objects/buttons.o -MD)
+F (.\buttons.c)(0x6006FCEE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_FRDM-KL05ZJ-IC:/Users/Lidia/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Lidia/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DMKL05Z32xxx4 -D_RTE_-o ./objects/buttons.o -MD)
 I (C:\Users\Lidia\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include\MKL05Z4.h)(0x585BD06A)
 I (C:\Users\Lidia\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8F2582)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED66044)
@@ -10,13 +10,13 @@ I (C:\Users\Lidia\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cms
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0D174C)
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0D1778)
 I (C:\Users\Lidia\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include\system_MKL05Z4.h)(0x55FBBCD8)
-I (buttons.h)(0x6006E7BB)
-I (lcd1602.h)(0x5FCB8D28)
-I (frdm_bsp.h)(0x5FCB8D2A)
-I (i2c.h)(0x5FCB8D3F)
-F (.\i2c.c)(0x5FCB8D25)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_FRDM-KL05ZJ-IC:/Users/Lidia/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Lidia/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DMKL05Z32xxx4 -D_RTE_-o ./objects/i2c.o -MD)
-I (i2c.h)(0x5FCB8D3F)
-I (frdm_bsp.h)(0x5FCB8D2A)
+I (buttons.h)(0x6006FCEE)
+I (lcd1602.h)(0x6006FCEE)
+I (frdm_bsp.h)(0x6006FCEE)
+I (i2c.h)(0x6006FCEE)
+F (.\i2c.c)(0x6006FCEE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_FRDM-KL05ZJ-IC:/Users/Lidia/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Lidia/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DMKL05Z32xxx4 -D_RTE_-o ./objects/i2c.o -MD)
+I (i2c.h)(0x6006FCEE)
+I (frdm_bsp.h)(0x6006FCEE)
 I (C:\Users\Lidia\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include\MKL05Z4.h)(0x585BD06A)
 I (C:\Users\Lidia\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8F2582)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED66044)
@@ -26,11 +26,7 @@ I (C:\Users\Lidia\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cms
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0D174C)
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0D1778)
 I (C:\Users\Lidia\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include\system_MKL05Z4.h)(0x55FBBCD8)
-<<<<<<< HEAD
-F (.\main.c)(0x6006EE78)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_FRDM-KL05ZJ-IC:/Users/Lidia/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Lidia/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DMKL05Z32xxx4 -D_RTE_-o ./objects/main.o -MD)
-=======
-F (.\main.c)(0x6006194A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_FRDM-KL05ZJ-IC:/Users/Lidia/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Lidia/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DMKL05Z32xxx4 -D_RTE_-o ./objects/main.o -MD)
->>>>>>> parent of 63c948a... buzzer
+F (.\main.c)(0x6007006E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_FRDM-KL05ZJ-IC:/Users/Lidia/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Lidia/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DMKL05Z32xxx4 -D_RTE_-o ./objects/main.o -MD)
 I (C:\Users\Lidia\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include\MKL05Z4.h)(0x585BD06A)
 I (C:\Users\Lidia\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8F2582)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED66044)
@@ -40,26 +36,18 @@ I (C:\Users\Lidia\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cms
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0D174C)
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0D1778)
 I (C:\Users\Lidia\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include\system_MKL05Z4.h)(0x55FBBCD8)
-<<<<<<< HEAD
-I (buttons.h)(0x6006E7BB)
-I (calc.h)(0x6006F44C)
-=======
-I (buttons.h)(0x5FCB75B9)
-I (calc.h)(0x5FDBAEE5)
->>>>>>> parent of 63c948a... buzzer
-I (lcd1602.h)(0x5FCB8D28)
-I (frdm_bsp.h)(0x5FCB8D2A)
-I (i2c.h)(0x5FCB8D3F)
-I (pit.h)(0x5FCA61C7)
-I (rtc.h)(0x60059C08)
-<<<<<<< HEAD
-I (buzzer.h)(0x6006E7BB)
-=======
->>>>>>> parent of 63c948a... buzzer
+I (buttons.h)(0x6006FCEE)
+I (buzzer.h)(0x6006FCEE)
+I (calc.h)(0x6006FF46)
+I (lcd1602.h)(0x6006FCEE)
+I (frdm_bsp.h)(0x6006FCEE)
+I (i2c.h)(0x6006FCEE)
+I (pit.h)(0x6006FCEE)
+I (rtc.h)(0x6006FCEE)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5ED66044)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5ED66044)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x5ED66044)
-F (.\pit.c)(0x5FCBABCA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_FRDM-KL05ZJ-IC:/Users/Lidia/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Lidia/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DMKL05Z32xxx4 -D_RTE_-o ./objects/pit.o -MD)
+F (.\pit.c)(0x6006FCEE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_FRDM-KL05ZJ-IC:/Users/Lidia/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Lidia/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DMKL05Z32xxx4 -D_RTE_-o ./objects/pit.o -MD)
 I (C:\Users\Lidia\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include\MKL05Z4.h)(0x585BD06A)
 I (C:\Users\Lidia\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8F2582)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED66044)
@@ -69,10 +57,10 @@ I (C:\Users\Lidia\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cms
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0D174C)
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0D1778)
 I (C:\Users\Lidia\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include\system_MKL05Z4.h)(0x55FBBCD8)
-I (pit.h)(0x5FCA61C7)
-F (.\lcd1602.c)(0x5FCB8D26)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_FRDM-KL05ZJ-IC:/Users/Lidia/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Lidia/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DMKL05Z32xxx4 -D_RTE_-o ./objects/lcd1602.o -MD)
-I (lcd1602.h)(0x5FCB8D28)
-I (frdm_bsp.h)(0x5FCB8D2A)
+I (pit.h)(0x6006FCEE)
+F (.\lcd1602.c)(0x6006FCEE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_FRDM-KL05ZJ-IC:/Users/Lidia/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Lidia/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DMKL05Z32xxx4 -D_RTE_-o ./objects/lcd1602.o -MD)
+I (lcd1602.h)(0x6006FCEE)
+I (frdm_bsp.h)(0x6006FCEE)
 I (C:\Users\Lidia\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include\MKL05Z4.h)(0x585BD06A)
 I (C:\Users\Lidia\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8F2582)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED66044)
@@ -82,12 +70,8 @@ I (C:\Users\Lidia\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cms
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0D174C)
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0D1778)
 I (C:\Users\Lidia\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include\system_MKL05Z4.h)(0x55FBBCD8)
-I (i2c.h)(0x5FCB8D3F)
-<<<<<<< HEAD
-F (.\calc.c)(0x6006FBBA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_FRDM-KL05ZJ-IC:/Users/Lidia/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Lidia/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DMKL05Z32xxx4 -D_RTE_-o ./objects/calc.o -MD)
-=======
-F (.\calc.c)(0x60058967)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_FRDM-KL05ZJ-IC:/Users/Lidia/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Lidia/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DMKL05Z32xxx4 -D_RTE_-o ./objects/calc.o -MD)
->>>>>>> parent of 63c948a... buzzer
+I (i2c.h)(0x6006FCEE)
+F (.\calc.c)(0x6006FF46)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_FRDM-KL05ZJ-IC:/Users/Lidia/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Lidia/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DMKL05Z32xxx4 -D_RTE_-o ./objects/calc.o -MD)
 I (C:\Users\Lidia\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include\MKL05Z4.h)(0x585BD06A)
 I (C:\Users\Lidia\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8F2582)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED66044)
@@ -97,24 +81,15 @@ I (C:\Users\Lidia\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cms
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0D174C)
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0D1778)
 I (C:\Users\Lidia\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include\system_MKL05Z4.h)(0x55FBBCD8)
-<<<<<<< HEAD
-I (calc.h)(0x6006F44C)
-I (buttons.h)(0x6006E7BB)
-I (lcd1602.h)(0x5FCB8D28)
-I (frdm_bsp.h)(0x5FCB8D2A)
-I (i2c.h)(0x5FCB8D3F)
-I (buzzer.h)(0x6006E7BB)
-=======
-I (calc.h)(0x5FDBAEE5)
-I (buttons.h)(0x5FCB75B9)
-I (lcd1602.h)(0x5FCB8D28)
-I (frdm_bsp.h)(0x5FCB8D2A)
-I (i2c.h)(0x5FCB8D3F)
->>>>>>> parent of 63c948a... buzzer
+I (calc.h)(0x6006FF46)
+I (buttons.h)(0x6006FCEE)
+I (lcd1602.h)(0x6006FCEE)
+I (frdm_bsp.h)(0x6006FCEE)
+I (i2c.h)(0x6006FCEE)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5ED66044)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5ED66044)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x5ED66044)
-F (.\rtc.c)(0x6005FFD3)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_FRDM-KL05ZJ-IC:/Users/Lidia/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Lidia/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DMKL05Z32xxx4 -D_RTE_-o ./objects/rtc.o -MD)
+F (.\rtc.c)(0x6006FCEE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_FRDM-KL05ZJ-IC:/Users/Lidia/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Lidia/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DMKL05Z32xxx4 -D_RTE_-o ./objects/rtc.o -MD)
 I (C:\Users\Lidia\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include\MKL05Z4.h)(0x585BD06A)
 I (C:\Users\Lidia\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8F2582)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED66044)
@@ -124,9 +99,8 @@ I (C:\Users\Lidia\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cms
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0D174C)
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0D1778)
 I (C:\Users\Lidia\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include\system_MKL05Z4.h)(0x55FBBCD8)
-I (rtc.h)(0x60059C08)
-<<<<<<< HEAD
-F (.\buzzer.c)(0x6006D7DD)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_FRDM-KL05ZJ-IC:/Users/Lidia/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Lidia/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DMKL05Z32xxx4 -D_RTE_-o ./objects/buzzer.o -MD)
+I (rtc.h)(0x6006FCEE)
+F (.\buzzer.c)(0x6006FCEE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_FRDM-KL05ZJ-IC:/Users/Lidia/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Lidia/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DMKL05Z32xxx4 -D_RTE_-o ./objects/buzzer.o -MD)
 I (C:\Users\Lidia\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include\MKL05Z4.h)(0x585BD06A)
 I (C:\Users\Lidia\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8F2582)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED66044)
@@ -136,25 +110,17 @@ I (C:\Users\Lidia\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cms
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0D174C)
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0D1778)
 I (C:\Users\Lidia\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include\system_MKL05Z4.h)(0x55FBBCD8)
-I (buzzer.h)(0x6006E7BB)
-F (.\buttons.h)(0x6006E7BB)()
-=======
-F (.\buttons.h)(0x5FCB75B9)()
->>>>>>> parent of 63c948a... buzzer
-F (.\frdm_bsp.h)(0x5FCB8D2A)()
-F (.\i2c.h)(0x5FCB8D3F)()
-F (.\pit.h)(0x5FCA61C7)()
-F (.\lcd1602.h)(0x5FCB8D28)()
-<<<<<<< HEAD
-F (.\calc.h)(0x6006F44C)()
-F (.\rtc.h)(0x60059C08)()
-F (.\buzzer.h)(0x6006E7BB)()
-=======
-F (.\calc.h)(0x5FDBAEE5)()
-F (.\rtc.h)(0x60059C08)()
->>>>>>> parent of 63c948a... buzzer
-F (RTE\Device\MKL05Z32xxx4\startup_MKL05Z4.s)(0x55FBBCD8)(--target=arm-arm-none-eabi -mcpu=cortex-m0plus -masm=auto -c-gdwarf-3 -Wa,armasm,--pd,"__EVAL SETA 1"-I./RTE/_FRDM-KL05ZJ-IC:/Users/Lidia/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Lidia/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 531" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"MKL05Z32xxx4 SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/startup_mkl05z4.o)
-F (RTE\Device\MKL05Z32xxx4\system_MKL05Z4.c)(0x55FBBCD8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_FRDM-KL05ZJ-IC:/Users/Lidia/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Lidia/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DMKL05Z32xxx4 -D_RTE_-o ./objects/system_mkl05z4.o -MD)
+I (buzzer.h)(0x6006FCEE)
+F (.\buttons.h)(0x6006FCEE)()
+F (.\frdm_bsp.h)(0x6006FCEE)()
+F (.\i2c.h)(0x6006FCEE)()
+F (.\pit.h)(0x6006FCEE)()
+F (.\lcd1602.h)(0x6006FCEE)()
+F (.\calc.h)(0x6006FF46)()
+F (.\rtc.h)(0x6006FCEE)()
+F (.\buzzer.h)(0x6006FCEE)()
+F (RTE\Device\MKL05Z32xxx4\startup_MKL05Z4.s)(0x6006FCEE)(--target=arm-arm-none-eabi -mcpu=cortex-m0plus -masm=auto -c-gdwarf-3 -Wa,armasm,--pd,"__EVAL SETA 1"-I./RTE/_FRDM-KL05ZJ-IC:/Users/Lidia/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Lidia/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 531" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"MKL05Z32xxx4 SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/startup_mkl05z4.o)
+F (RTE\Device\MKL05Z32xxx4\system_MKL05Z4.c)(0x6006FCEE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_FRDM-KL05ZJ-IC:/Users/Lidia/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Lidia/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DMKL05Z32xxx4 -D_RTE_-o ./objects/system_mkl05z4.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED66044)
 I (C:\Users\Lidia\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include\MKL05Z4.h)(0x585BD06A)
 I (C:\Users\Lidia\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8F2582)

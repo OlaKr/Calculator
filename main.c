@@ -1,5 +1,6 @@
 #include "MKL05Z4.h"
 #include "buttons.h"
+#include "buzzer.h"
 #include "calc.h"
 #include "lcd1602.h"
 #include "pit.h"
@@ -38,7 +39,7 @@ int main(void) {
 	PORTB->PCR[13] |= PORT_PCR_MUX(1); /* MUX cónfig. Set Pin 8 óf PORT B as GPIO */
 	PTB->PDDR |= (1<<13);
 	
-<<<<<<< HEAD
+
 	//dioda
 	PORTB->PCR[2] |= PORT_PCR_MUX(1); /* MUX cónfig. Set Pin 8 óf PORT B as GPIO */
 	PTB->PDDR |= (1<<2);
@@ -50,7 +51,7 @@ int main(void) {
 	buzzer();
 	delay_ms(1000);
 	buzzer();
-=======
+
 	//PTB->PDOR&=~(1<<13); //off
 	PTB->PDOR|=(1<<13); //on
 
@@ -61,7 +62,7 @@ int main(void) {
 	//PTB->PDOR&=~(1<<13); //off
 	PTB->PDOR|=(1<<5); //on
 
->>>>>>> parent of 63c948a... buzzer
+
 	
 	LCD1602_Init(); /* initialize LCD */
 	LCD1602_Backlight(TRUE);
@@ -87,7 +88,7 @@ int main(void) {
 						calculator(print_button(i));
 					
 				}
-<<<<<<< HEAD
+
 				
 				//if( ( PTB->PDIR & (1<<BUTTON_MODE) ) == 0 ){ /* Test if buttón pressed */
 					//	PTB->PDOR|=(1<<2); //on
@@ -99,11 +100,11 @@ int main(void) {
 				//LCD1602_SetCursor(0,0);
 				//sprintf(temp, "%i", sec);
 				//LCD1602_Print(temp);
-=======
+
 				LCD1602_SetCursor(0,0);
 				sprintf(temp, "%i", sec);
 	LCD1602_Print(temp);
->>>>>>> parent of 63c948a... buzzer
+
 			//	rtc_reset();
 				irqTimer=0;
 			}
