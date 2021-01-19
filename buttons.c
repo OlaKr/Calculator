@@ -141,11 +141,19 @@ void mode_change(void){
 			PTB->PDOR|=(1<<2); //on
 			MODE_FLAG =0;
 			//PTB->PDOR&=~(1<<2); //off
+			LCD1602_SetCursor(0,0);
+			LCD1602_Print("");
+			LCD1602_SetCursor(0,1);
+			LCD1602_Print("");
 		}
 		else if(MODE_FLAG == 0){
 			PTB->PDOR&=~(1<<2); //off
 			MODE_FLAG = 1;
 			//PTB->PDOR|=(1<<2); //on
+			LCD1602_SetCursor(0,0);
+			LCD1602_Print("");
+			LCD1602_SetCursor(0,1);
+			LCD1602_Print("");
 		}
 		while( ( PTB->PDIR & (1<<BUTTON_MODE) ) == 0 ) /* Wait fór release */
 							delay_ms(100); /* Debóuncing */

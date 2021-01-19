@@ -27,59 +27,79 @@ Project File Date:  01/19/2021
 <h2>Output:</h2>
 *** Using Compiler 'V6.14', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'FRDM-KL05ZJ'
-main.c(3): warning: In file included from...
+calc.c(2): warning: In file included from...
+./calc.h(9): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+calc.c(5): warning: In file included from...
 ./buzzer.h(6): warning: no newline at end of file [-Wnewline-eof]
 #endif
       ^
-main.c(4): warning: In file included from...
-./calc.h(10): warning: no newline at end of file [-Wnewline-eof]
-#endif
-      ^
-main.c(6): warning: In file included from...
-./pit.h(8): warning: no newline at end of file [-Wnewline-eof]
-#endif
-      ^
-main.c(8): warning: In file included from...
-./rtc.h(10): warning: no newline at end of file [-Wnewline-eof]
-#endif
-      ^
-main.c(16): warning: no previous extern declaration for non-static variable 'irqTimer' [-Wmissing-variable-declarations]
-bool irqTimer=0;
+calc.c(11): warning: no previous extern declaration for non-static variable 'temp' [-Wmissing-variable-declarations]
+char temp[20]={"\0"};
      ^
-main.c(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-bool irqTimer=0;
+calc.c(11): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char temp[20]={"\0"};
 ^
-main.c(17): warning: no previous extern declaration for non-static variable 'sec' [-Wmissing-variable-declarations]
-uint32_t sec=0;
-         ^
-main.c(17): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-uint32_t sec=0;
-^
-main.c(19): warning: no previous prototype for function 'RTC_Seconds_IRQHandler' [-Wmissing-prototypes]
-void RTC_Seconds_IRQHandler()
+calc.c(12): warning: no previous extern declaration for non-static variable 'number' [-Wmissing-variable-declarations]
+char number[10]={"\0"};
      ^
-main.c(19): note: declare 'static' if the function is not intended to be used outside of this translation unit
-void RTC_Seconds_IRQHandler()
+calc.c(12): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char number[10]={"\0"};
 ^
-static 
-main.c(25): warning: no previous prototype for function 'PIT_IRQHandler' [-Wmissing-prototypes]
-void PIT_IRQHandler(){
-     ^
-main.c(25): note: declare 'static' if the function is not intended to be used outside of this translation unit
-void PIT_IRQHandler(){
-^
-static 
-main.c(48): warning: implicit declaration of function 'delay_ms' is invalid in C99 [-Wimplicit-function-declaration]
-        delay_ms(1000);
+calc.c(13): warning: no previous extern declaration for non-static variable 'reset' [-Wmissing-variable-declarations]
+uint8_t reset = 0;
         ^
-9 warnings generated.
-compiling main.c...
+calc.c(13): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t reset = 0;
+^
+calc.c(14): warning: no previous extern declaration for non-static variable 'counter' [-Wmissing-variable-declarations]
+int counter = 0;
+    ^
+calc.c(14): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int counter = 0;
+^
+calc.c(16): warning: no previous extern declaration for non-static variable 's' [-Wmissing-variable-declarations]
+int s = 0;
+    ^
+calc.c(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int s = 0;
+^
+calc.c(18): warning: no previous extern declaration for non-static variable 'last_arg' [-Wmissing-variable-declarations]
+char last_arg = '+';
+     ^
+calc.c(18): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char last_arg = '+';
+^
+calc.c(19): warning: no previous extern declaration for non-static variable 'result' [-Wmissing-variable-declarations]
+int result = 0;
+    ^
+calc.c(19): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int result = 0;
+^
+calc.c(48): warning: implicit conversion turns floating-point number into integer: 'double' to 'int' [-Wfloat-conversion]
+                                result = pow(result,a);
+                                       ~ ^~~~~~~~~~~~~
+calc.c(51): warning: implicit conversion turns floating-point number into integer: 'double' to 'int' [-Wfloat-conversion]
+                                result = sqrt(a);
+                                       ~ ^~~~~~~
+calc.c(154): warning: declaration shadows a variable in the global scope [-Wshadow]
+                        int result = liczby[0];
+                            ^
+calc.c(19): note: previous declaration is here
+int result = 0;
+    ^
+calc.c(15): warning: no previous extern declaration for non-static variable 'sep' [-Wmissing-variable-declarations]
+char sep[2];
+     ^
+calc.c(15): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char sep[2];
+^
+13 warnings generated.
+compiling calc.c...
 linking...
-.\Objects\klawiatura.axf: Error: L6218E: Undefined symbol delay_ms (referred from buttons.o).
-Not enough information to list image symbols.
-Not enough information to list load addresses in the image map.
-Finished: 2 information, 0 warning and 1 error messages.
-".\Objects\klawiatura.axf" - 1 Error(s), 9 Warning(s).
+Program Size: Code=11248 RO-data=788 RW-data=24 ZI-data=424  
+".\Objects\klawiatura.axf" - 0 Error(s), 13 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -105,9 +125,8 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.4.0
 
    * Component: Keil::Device:Startup:1.0.0
-      Source file:   Device\Source\system_MKL05Z4.c
       Source file:   Device\Source\ARM\startup_MKL05Z4.s
-Target not created.
+      Source file:   Device\Source\system_MKL05Z4.c
 Build Time Elapsed:  00:00:00
 </pre>
 </body>

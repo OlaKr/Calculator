@@ -8,7 +8,7 @@
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
   C:\Users\Lidia\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include\system_MKL05Z4.h \
-  buttons.h buzzer.h calc.h lcd1602.h frdm_bsp.h i2c.h pit.h rtc.h \
+  buttons.h calc.h lcd1602.h frdm_bsp.h i2c.h pit.h rtc.h buzzer.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h

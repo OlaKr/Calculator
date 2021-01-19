@@ -2,16 +2,21 @@
 #include "calc.h"
 #include "buttons.h"
 #include "lcd1602.h"
+#include "buzzer.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <math.h>
 
 char temp[20]={"\0"};
+char number[10]={"\0"};
+uint8_t reset = 0;
 int counter = 0;
 char sep[2];
 int s = 0;
 uint8_t FLAG = 0;
-char last_arg;
+char last_arg = '+';
+int result = 0;
 
 void calculator(char arg){
 	LCD1602_SetCursor(0, 0);
@@ -22,65 +27,92 @@ void calculator(char arg){
 	if(arg == '='){
 			temp[counter] = arg;
 			LCD1602_SetCursor(0, 0);
-				LCD1602_Print(temp);
-			LCD1602_SetCursor(0, 1);
-				LCD1602_Print("=");
-		//ParseString(temp, sep);
-		getResult(temp, temp, s);
+			LCD1602_Print(temp);
+			LCD1602_SetCursor(10, 0);
+			
+			
+			int a = atoi(number);
+			if(last_arg == '+'){
+				result = result + a;
+			}
+			else if(last_arg == '-'){
+				result = result - a;
+			}
+			else if(last_arg == '/'){
+				result = result / a;
+			}
+			else if(last_arg == '*'){
+				result = result * a;
+			}
+			else if(last_arg == '^'){
+				result = pow(result,a);
+			}
+			else if(last_arg == 's'){
+				result = sqrt(a);
+			}
+			char sm[20]={"\0"};
+			inttostring(sm,result);
+			LCD1602_SetCursor(12, 1);
+			LCD1602_Print(sm);
 		
 			counter = 0;
 			memset(temp,0,sizeof(temp));
+			memset(number,0,sizeof(number));
+			last_arg = '+';
+			reset=0;
+			result = 0;
 	}
 	else if (arg == 'C'){
 			counter = 0;
 			memset(temp,0,sizeof(temp));
+		
 	}
-	else if(arg == '+' || arg == '-' || arg == '*' || arg == '/'){
+	else if(arg == '+' || arg == '-' || arg == '*' || arg == '/' || arg == '^' || arg == 's'){
 			//sep[0] = arg;
+			int a = atoi(number);
+			if(last_arg == '+'){
+				result = result + a;
+			}
+			else if(last_arg == '-'){
+				result = result - a;
+			}
+			else if(last_arg == '/'){
+				result = result / a;
+			}
+			else if(last_arg == '*'){
+				result = result * a;
+			}
+		
+			//char sm[20]={"\0"};
+			//inttostring(sm,a);
+			//LCD1602_SetCursor(12, 1);
+			//LCD1602_Print("???");
+			
+			
+			memset(number,0,sizeof(number));
+			
 			last_arg = arg;
 			temp[counter] = arg;
 			LCD1602_SetCursor(0, 0);
 			LCD1602_Print(temp);
 			counter++;
+			reset=0;
 			s++;
 	}
 	else{
-			if(last_arg == '/' && arg == '0'){
-				FLAG = 1;
-				counter = 0;
-				memset(temp,0,sizeof(temp));
-			}
-			else{
+			
 				temp[counter] = arg;
+				number[reset] = arg;
 				LCD1602_SetCursor(0, 0);
 				LCD1602_Print(temp);
 				counter++;
-			}
+				reset++;
 			
-	}
-		
-
-		
+	}	
 	
 }
 
-void ParseString(char* str, char* separator)
-{
-	char sm[20]={"\0"};
-	uint8_t i=0;
-	char *ptr;
-	ptr=strtok(str,separator);
-	int a = atoi(ptr);
-	ptr=strtok(NULL,'=');
-	int b = atoi(ptr);
-	int result;
-	if(separator[0] =='+') result = a+b;
-	else if(separator[0] =='-') result = a-b;
-	else if(separator[0] =='*') result = a*b;
-	else if(separator[0] =='/') result = a/b;
-	inttostring(sm,result);
-	LCD1602_Print(sm);
-}
+
 
 void getResult(char* str, char* str2, int size) {
 
@@ -143,7 +175,7 @@ void getResult(char* str, char* str2, int size) {
 			char sm[20]={"\0"};
 			//inttostring(sm,liczby[size-1]);
 			inttostring(sm,result);
-			LCD1602_SetCursor(2, 1);
+			LCD1602_SetCursor(12, 0);
 			LCD1602_Print(sm);
 		
 
