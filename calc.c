@@ -2,6 +2,7 @@
 #include "calc.h"
 #include "buttons.h"
 #include "lcd1602.h"
+#include "buzzer.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -53,23 +54,7 @@ void calculator(char arg){
 	
 }
 
-void ParseString(char* str, char* separator)
-{
-	char sm[20]={"\0"};
-	uint8_t i=0;
-	char *ptr;
-	ptr=strtok(str,separator);
-	int a = atoi(ptr);
-	ptr=strtok(NULL,'=');
-	int b = atoi(ptr);
-	int result;
-	if(separator[0] =='+') result = a+b;
-	else if(separator[0] =='-') result = a-b;
-	else if(separator[0] =='*') result = a*b;
-	else if(separator[0] =='/') result = a/b;
-	inttostring(sm,result);
-	LCD1602_Print(sm);
-}
+
 
 void getResult(char* str, char* str2, int size) {
 

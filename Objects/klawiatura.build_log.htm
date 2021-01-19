@@ -22,13 +22,13 @@ Dialog DLL:      TARMCM1.DLL V1.14.2.0
  
 <h2>Project:</h2>
 C:\Users\Lidia\Documents\GitHub\Calculator\klawiatura.uvprojx
-Project File Date:  01/18/2021
+Project File Date:  01/19/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.14', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'FRDM-KL05ZJ'
 main.c(3): warning: In file included from...
-./calc.h(7): warning: no newline at end of file [-Wnewline-eof]
+./calc.h(6): warning: no newline at end of file [-Wnewline-eof]
 #endif
       ^
 main.c(5): warning: In file included from...
@@ -39,37 +39,88 @@ main.c(7): warning: In file included from...
 ./rtc.h(10): warning: no newline at end of file [-Wnewline-eof]
 #endif
       ^
-main.c(15): warning: no previous extern declaration for non-static variable 'irqTimer' [-Wmissing-variable-declarations]
+main.c(8): warning: In file included from...
+./buzzer.h(8): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+main.c(16): warning: no previous extern declaration for non-static variable 'irqTimer' [-Wmissing-variable-declarations]
 bool irqTimer=0;
      ^
-main.c(15): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+main.c(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
 bool irqTimer=0;
 ^
-main.c(16): warning: no previous extern declaration for non-static variable 'sec' [-Wmissing-variable-declarations]
+main.c(17): warning: no previous extern declaration for non-static variable 'sec' [-Wmissing-variable-declarations]
 uint32_t sec=0;
          ^
-main.c(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+main.c(17): note: declare 'static' if the variable is not intended to be used outside of this translation unit
 uint32_t sec=0;
 ^
-main.c(18): warning: no previous prototype for function 'RTC_Seconds_IRQHandler' [-Wmissing-prototypes]
+main.c(19): warning: no previous prototype for function 'RTC_Seconds_IRQHandler' [-Wmissing-prototypes]
 void RTC_Seconds_IRQHandler()
      ^
-main.c(18): note: declare 'static' if the function is not intended to be used outside of this translation unit
+main.c(19): note: declare 'static' if the function is not intended to be used outside of this translation unit
 void RTC_Seconds_IRQHandler()
 ^
 static 
-main.c(24): warning: no previous prototype for function 'PIT_IRQHandler' [-Wmissing-prototypes]
+main.c(25): warning: no previous prototype for function 'PIT_IRQHandler' [-Wmissing-prototypes]
 void PIT_IRQHandler(){
      ^
-main.c(24): note: declare 'static' if the function is not intended to be used outside of this translation unit
+main.c(25): note: declare 'static' if the function is not intended to be used outside of this translation unit
 void PIT_IRQHandler(){
 ^
 static 
-7 warnings generated.
+main.c(35): warning: no previous prototype for function 'delay_ms' [-Wmissing-prototypes]
+void delay_ms( int n) {
+     ^
+main.c(35): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void delay_ms( int n) {
+^
+static 
+main.c(66): warning: unused variable 'temp' [-Wunused-variable]
+        char temp[20]={"\0"};
+             ^
+10 warnings generated.
 compiling main.c...
+calc.c(2): warning: In file included from...
+./calc.h(6): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+calc.c(5): warning: In file included from...
+./buzzer.h(8): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+calc.c(10): warning: no previous extern declaration for non-static variable 'temp' [-Wmissing-variable-declarations]
+char temp[20]={"\0"};
+     ^
+calc.c(10): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char temp[20]={"\0"};
+^
+calc.c(11): warning: no previous extern declaration for non-static variable 'counter' [-Wmissing-variable-declarations]
+int counter = 0;
+    ^
+calc.c(11): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int counter = 0;
+^
+calc.c(13): warning: no previous extern declaration for non-static variable 's' [-Wmissing-variable-declarations]
+int s = 0;
+    ^
+calc.c(13): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int s = 0;
+^
+calc.c(125): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+calc.c(12): warning: no previous extern declaration for non-static variable 'sep' [-Wmissing-variable-declarations]
+char sep[2];
+     ^
+calc.c(12): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char sep[2];
+^
+7 warnings generated.
+compiling calc.c...
 linking...
-Program Size: Code=4336 RO-data=532 RW-data=28 ZI-data=392  
-".\Objects\klawiatura.axf" - 0 Error(s), 7 Warning(s).
+Program Size: Code=3736 RO-data=532 RW-data=28 ZI-data=392  
+".\Objects\klawiatura.axf" - 0 Error(s), 17 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -97,7 +148,7 @@ Package Vendor: Keil
    * Component: Keil::Device:Startup:1.0.0
       Source file:   Device\Source\system_MKL05Z4.c
       Source file:   Device\Source\ARM\startup_MKL05Z4.s
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:00
 </pre>
 </body>
 </html>
