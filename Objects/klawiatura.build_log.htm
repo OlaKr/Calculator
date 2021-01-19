@@ -22,11 +22,12 @@ Dialog DLL:      TARMCM1.DLL V1.14.2.0
  
 <h2>Project:</h2>
 C:\Users\Lidia\Documents\GitHub\Calculator\klawiatura.uvprojx
-Project File Date:  01/19/2021
+Project File Date:  01/18/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.14', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'FRDM-KL05ZJ'
+<<<<<<< HEAD
 calc.c(2): warning: In file included from...
 ./calc.h(9): warning: no newline at end of file [-Wnewline-eof]
 #endif
@@ -65,10 +66,54 @@ char last_arg;
 calc.c(15): note: declare 'static' if the variable is not intended to be used outside of this translation unit
 char last_arg;
 ^
+=======
+main.c(3): warning: In file included from...
+./calc.h(7): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+main.c(5): warning: In file included from...
+./pit.h(8): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+main.c(7): warning: In file included from...
+./rtc.h(10): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+main.c(15): warning: no previous extern declaration for non-static variable 'irqTimer' [-Wmissing-variable-declarations]
+bool irqTimer=0;
+     ^
+main.c(15): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+bool irqTimer=0;
+^
+main.c(16): warning: no previous extern declaration for non-static variable 'sec' [-Wmissing-variable-declarations]
+uint32_t sec=0;
+         ^
+main.c(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t sec=0;
+^
+main.c(18): warning: no previous prototype for function 'RTC_Seconds_IRQHandler' [-Wmissing-prototypes]
+void RTC_Seconds_IRQHandler()
+     ^
+main.c(18): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void RTC_Seconds_IRQHandler()
+^
+static 
+main.c(24): warning: no previous prototype for function 'PIT_IRQHandler' [-Wmissing-prototypes]
+void PIT_IRQHandler(){
+     ^
+main.c(24): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void PIT_IRQHandler(){
+^
+static 
+>>>>>>> parent of 63c948a... buzzer
 7 warnings generated.
-compiling calc.c...
+compiling main.c...
 linking...
+<<<<<<< HEAD
 Program Size: Code=3980 RO-data=532 RW-data=28 ZI-data=392  
+=======
+Program Size: Code=4336 RO-data=532 RW-data=28 ZI-data=392  
+>>>>>>> parent of 63c948a... buzzer
 ".\Objects\klawiatura.axf" - 0 Error(s), 7 Warning(s).
 
 <h2>Software Packages used:</h2>
@@ -97,7 +142,7 @@ Package Vendor: Keil
    * Component: Keil::Device:Startup:1.0.0
       Source file:   Device\Source\system_MKL05Z4.c
       Source file:   Device\Source\ARM\startup_MKL05Z4.s
-Build Time Elapsed:  00:00:00
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>
