@@ -53,6 +53,7 @@ int main(void) {
 	//PTB->PDOR&=~(1<<13); //off
 	PTB->PDOR|=(1<<2); //on
 	delay_ms(1000);
+	//PTB->PDOR&=~(1<<2); //off
 	
 	buzzer();
 	delay_ms(1000);
@@ -72,7 +73,8 @@ int main(void) {
 					buzzer();
 					FLAG = 0;
 				} 
-	
+				
+				mode_change();
 				
 				for (int i = 1; i < 5; i++)
 				{
@@ -81,6 +83,12 @@ int main(void) {
 						calculator(print_button(i));
 					
 				}
+				
+				//if( ( PTB->PDIR & (1<<BUTTON_MODE) ) == 0 ){ /* Test if buttón pressed */
+					//	PTB->PDOR|=(1<<2); //on
+						//while( ( PTB->PDIR & (1<<BUTTON_MODE) ) == 0 ) /* Wait fór release */
+							//delay_ms(100); /* Debóuncing */
+				//}	
 				
 				//rtc
 				//LCD1602_SetCursor(0,0);

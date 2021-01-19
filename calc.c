@@ -11,7 +11,7 @@ char temp[20]={"\0"};
 int counter = 0;
 char sep[2];
 int s = 0;
-int FLAG = 0;
+uint8_t FLAG = 0;
 char last_arg;
 
 void calculator(char arg){
@@ -124,8 +124,11 @@ void getResult(char* str, char* str2, int size) {
 					}
 					p++;
 			}
+			
 			char sm[20]={"\0"};
+			//inttostring(sm,liczby[size-1]);
 			inttostring(sm,result);
+			LCD1602_SetCursor(2, 1);
 			LCD1602_Print(sm);
 		
 
