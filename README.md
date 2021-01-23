@@ -19,6 +19,6 @@ There are two modes that can be changed by pressing the first button:
 
 
 ## Used elements:
-![elements](https://github.com/OlaKr/Calculator/blob/test/images/board.jpg)
+![elements](https://github.com/OlaKr/Calculator/blob/5minutes_test_helper/images/board.jpg)
 
 
