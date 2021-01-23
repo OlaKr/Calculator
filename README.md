@@ -13,6 +13,7 @@ There are two modes that can be changed by pressing the first button:
 	* To delete the entered characters, press the C button
 
 2. CLOCK (main diode is off)
+	* Clock works thanks to RTC
 	* Shows the amount of time left until the end of the test
 	* The end of time is signaled by a buzzer sound and LEDs that turn off
 
