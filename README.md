@@ -1,6 +1,6 @@
 # 5 MINUTES TEST HELPER
 ## Project topic:
-Calculator with with elapsed time display
+Calculator with elapsed time display
 
 ## Purpose:
 Create a calculator with basic math functions like addition, subtraction, multiplication, division, square root and exponentiation. Make a clock showing the real time.
