@@ -1,8 +1,6 @@
 #include "MKL05Z4.h"
 #include	"pit.h"
 
-
-
 void PIT_Init(void)
 {
 	uint32_t tsv;

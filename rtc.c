@@ -25,7 +25,6 @@ void rtc_reset(void)
 	RTC->CR = RTC_CR_SWR_MASK;
 	RTC->CR &= ~RTC_CR_SWR_MASK;
 	
-	
 }
 
 uint32_t rtc_update(void)
