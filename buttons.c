@@ -137,7 +137,6 @@ void mode_change(void){
 		if(MODE_FLAG == 1) { //1->0
 			PTB->PDOR|=(1<<2); //on
 			MODE_FLAG =0;
-			//PTB->PDOR&=~(1<<2); //off
 			LCD1602_SetCursor(0,0);
 			LCD1602_Print("Kalkulator");
 			LCD1602_SetCursor(0,1);
@@ -147,7 +146,6 @@ void mode_change(void){
 		else if(MODE_FLAG == 0){
 			PTB->PDOR&=~(1<<2); //off
 			MODE_FLAG = 1;
-			//PTB->PDOR|=(1<<2); //on
 			LCD1602_SetCursor(0,0);
 			LCD1602_Print("Zegar      ");
 			LCD1602_SetCursor(0,1);
@@ -158,32 +156,5 @@ void mode_change(void){
 			delay_ms(100); /* Debóuncing */
 	}
 }
-
-void inttostring(char* str, int number) {
-	
-	int mod, len, num;
-
-	len = 0;
-	num = number;
-
-	while (num > 0) {
-		num /= 10;
-		len++;
-	}
-
-	for (int i = 0; i < len; i++) {
-		mod = number % 10;
-		number /= 10;
-		str[len - (i + 1)] = mod + 0x30; //0x30=0 ASCII
-	}
-
-	str[len] = '\0';
-
-	if (str[0] == '\0') {
-		str[0] = '0';
-		str[1] = '\0';
-	}
-}
-
 
 

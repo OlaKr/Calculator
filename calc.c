@@ -71,8 +71,10 @@ void calculator(char arg){
 			}
 			
 			char sm[20]={"\0"};
-			inttostring(sm,result);
 			LCD1602_SetCursor(12, 1);
+			
+			tostring(sm, result);
+			
 			LCD1602_Print(sm);
 		
 			counter = 0;
@@ -151,6 +153,44 @@ void calculator(char arg){
 }
 
 
+ void tostring(char str[], int num)
+ {
+     int i, rem, len = 0, n;
+     uint8_t a=0;
+     if(num<0){
+       n=-num;
+       a=1;
+		}
+     else{
+       n=num;
+       a=0;
+		}
+   while (n != 0){
+       len++;
+       n /= 10;
+    }
+   if(a==1){
+        num=-1*num;
+        str[0]='-';
+		}
+
+    for (i = 0; i < len; i++){
+        rem = num % 10;
+        num = num / 10;
+        if(a==1){
+            str[len - (i)] = rem + '0';
+        }
+        else{
+           str[len - (i + 1)] = rem + '0';
+        }   
+     }
+       if(a==1){
+           str[len+1] = '\0';
+       }
+       else{
+           str[len] = '\0';
+       }
+    }
 
 void getResult(char* str, char* str2, int size) {
 
@@ -211,14 +251,9 @@ void getResult(char* str, char* str2, int size) {
 			}
 			
 			char sm[20]={"\0"};
-			//inttostring(sm,liczby[size-1]);
-			inttostring(sm,result);
+
 			LCD1602_SetCursor(12, 0);
 			LCD1602_Print(sm);
-		
 
-   
-		
-   // printf("%d", result); 
 
 }

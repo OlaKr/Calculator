@@ -20,7 +20,6 @@
 void buttons_init(void);
 void choose_row(int option);
 char print_button(int row);
-void inttostring(char* str, int number);
 void mode_change(void);
 extern uint8_t MODE_FLAG;
 

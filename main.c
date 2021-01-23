@@ -47,19 +47,16 @@ void delay_ms( int n) {
 int main(void) {
 
 	SIM->SCGC5 |= SIM_SCGC5_PORTB_MASK;
+	//buzzer
 	PORTB->PCR[13] |= PORT_PCR_MUX(1); /* MUX cónfig. Set Pin 8 óf PORT B as GPIO */
 	PTB->PDDR |= (1<<13);
 	
-	//dioda
+	//dioda glowna
 	PORTB->PCR[2] |= PORT_PCR_MUX(1); /* MUX cónfig. Set Pin 8 óf PORT B as GPIO */
 	PTB->PDDR |= (1<<2);
 	PTB->PDOR|=(1<<2); //on
 	delay_ms(1000);
-	
-	
-	buzzer();
-	delay_ms(1000);
-	buzzer();
+
 	
 	led_init();
 	
@@ -93,10 +90,13 @@ int main(void) {
 					sec__ = sec_%60;
 				
 						
-					if (sec == 294)
+					if (sec == 295)
 					turn_off();
 					
 					if(sec >= 300){
+						LCD1602_SetCursor(0,0);
+						LCD1602_Print("Zegar");
+						LCD1602_SetCursor(0,1);
 						LCD1602_Print("KONIEC CZASU!!!!!      ");
 						
 					}

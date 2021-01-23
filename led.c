@@ -29,36 +29,36 @@ void led_init(void){
 
 }
 
-void turn_off(void){
+void turn_off(void){ //gaszenie diod
 	
 	//zgaszenie pierwszej
 	LCD1602_SetCursor(0,1);
-	LCD1602_Print("5 seconds!        ");
-	delay_ms(1000);
+	LCD1602_Print("5 sekund!        ");
+	delay_ms(800);
 	buzzer();
 	PTB->PDOR&=~(1<<0); //off
 	LCD1602_SetCursor(0,1);
 	
-	LCD1602_Print("4 seconds!        ");
-	delay_ms(1000);
+	LCD1602_Print("4 sekundy!        ");
+	delay_ms(800);
 	buzzer();
 	PTB->PDOR&=~(1<<10); //off
 	LCD1602_SetCursor(0,1);
 	
-	LCD1602_Print("3 seconds!        ");
-	delay_ms(1000);
+	LCD1602_Print("3 sekundy!        ");
+	delay_ms(800);
 	buzzer();
 	PTB->PDOR&=~(1<<11); //off
 	LCD1602_SetCursor(0,1);
 	
-	LCD1602_Print("2 seconds!        ");
-	delay_ms(1000);
+	LCD1602_Print("2 sekundy!        ");
+	delay_ms(800);
 	buzzer();
 	PTB->PDOR&=~(1<<9); //off
 	LCD1602_SetCursor(0,1);
 	
-	LCD1602_Print("1 seconds!        ");
-	delay_ms(1000);
+	LCD1602_Print("1 sekunda!        ");
+	delay_ms(800);
 	buzzer();
 	PTB->PDOR&=~(1<<8); //off
 	buzzer();

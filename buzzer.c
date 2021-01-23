@@ -4,11 +4,8 @@
 
 void buzzer(void){
 	
-	//PTB->PDOR&=~(1<<13); //off
-	PTB->PDOR|=(1<<13); //on
-	
+	PTB->PDOR|=(1<<13); 
 	delay_ms(200);
-	
 	PTB->PDOR&=~(1<<13);
 
 }
